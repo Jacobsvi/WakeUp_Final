@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Joan&display=swap" rel="stylesheet">
+    <title>Gruppebestilling</title>
+
+    <link rel="icon" href="Billeder/favicon.svg" type="image/x-icon">
+
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1 class="forms_h1">Gruppebestilling</h1>
+        <div class="Indhold">
+
+            <section id="form-section">
+                <article id="form-info">
+                    <h2 class="forms_h2">Forespørgsel på gruppebooking</h2>
+                    <p class="forms_p">Rejser I som en større gruppe, virksomhed eller gennem et rejsebureau, tilbyder
+                        vi skræddersyede
+                        løsninger tilpasset
+                        jeres behov.
+                        <br>
+                        Udfyld venligst formularen nedenfor med relevante oplysninger om jeres ophold, antal personer og
+                        eventuelle ønsker.
+                        Vores bookingteam vil herefter kontakte jer hurtigst muligt for at hjælpe med planlægning,
+                        priser og
+                        tilgængelighed.
+                    </p>
+                </article>
+                <form id="webform">
+                    <fieldset>
+                        <legend>
+                            <h3>Kontakt oplysninger</h3>
+                        </legend>
+                        <div class="form-group">
+                            <label for="full_name">Fuldenavn</label>
+                            <input aria-describedby="full_name-error" type="text" id="full_name" name="full_name"
+                                required />
+                            <p class="error-message" id="full_name-error">Please enter a value</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company_name">Firma / rejsebureau / organisation</label>
+                            <input aria-describedby="company_name" type="text" id="company_name" name="company_name"
+                                required />
+                            <p class="error-message" id="company_name">Please enter a value</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mailadresse</label>
+                            <input aria-describedby="email-error" type="email" id="email" name="email" required />
+                            <p class="error-message" id="email-error">Please enter a value</p>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            <h3>Pratiske informationer</h3>
+                        </legend>
+
+                        <div>
+                            <label for="groupe-select">Type af Gruppebestilling</label>
+
+                            <select aria-describedby="adress-error" id="groupe-select" name="pet" required>
+                                <option value="">--Vælg type--</option>
+                                <option value="hamster1">Firma / virksomhed</option>
+                                <option value="hamster2">Forening</option>
+                                <option value="hamster2">Skole / uddannelse</option>
+                                <option value="hamster2">Privat gruppe</option>
+                                <option value="hamster2">Rejsebureau</option>
+                                <option value="hamster2">Andet</option>
+                            </select>
+                            <p class="error-message" id="adress-error">Please choose a value</p>
+                        </div>
+
+                        <div>
+                            <label for="date">Dato for ankomst</label>
+                            <input type="date" aria-describedby="date" type="date" id="date" name="date" required />
+                            <p class="error-message" id="date">Please enter a value</p>
+
+                            <label for="date">Dato for afrejse</label>
+                            <input type="date" aria-describedby="date" type="date" id="date" name="date" required />
+                            <p class="error-message" id="date">Please enter a value</p>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="faciliteter">Specifikke faciliteter som ønskes?</p>
+                            <label for="Morgenmad">
+                                <input id="morgenmad" type="checkbox" name="faciliteter" value="morgenmad" required>
+                                Morgenmad
+                            </label>
+                            <label for="parkering">
+                                <input id="parkering" type="checkbox" name="faciliteter" value="parkering">
+                                Parkering
+                            </label>
+                            <label for="transport">
+                                <input id="transport" type="checkbox" name="faciliteter" value="Transport">
+                                Transport til og fra lufthavnen
+                            </label>
+                            <label for="bagage">
+                                <input id="bagage" type="checkbox" name="faciliteter" value="bagage">
+                                Opbevaring af bagage
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="terms">
+                            <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
+                            Accept terms
+                        </label>
+                        <p class="error-message" id="accept_terms-error">Please check of the box</p>
+                    </div>
+                    <button class="Sign_up">Sign up</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <img src="billeder_sevaerdigheder/footer_tema5.svg" alt="billed af hoteller">
+        <div class="Ydeligere_info">
+            <img src="billeder/logo.svg" alt="logo">
+            <div>
+                <h3>Info</h3>
+                <p>Om os</p>
+                <p>Parkering</p>
+            </div>
+            <div>
+                <h3>Booking</h3>
+                <p>Hollerne</p>
+                <p>Værelser og Priser</p>
+                <p>Firmaaftale</p>
+                <p>Gruppebestilling</p>
+                <p>Statsaftale</p>
+                <p>Gavekort</p>
+            </div>
+            <div>
+                <h3 class="nyhedsbrev_h3">Tilmeld dig vores nyhedsbrev</h3>
+                <a class="link_footer" href="http://">Tilmeld dig her</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

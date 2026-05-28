@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faciliteter</title>
+    <link rel="stylesheet" href="faciliteter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sevaerdigheder.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="general.css">
+
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="off_screen_menu">
+
+        <li> <a href="lokationer.html">Lokationer</a></li>
+        <li> <a href="sevaedigheder.html">Seværdigheder</a></li>
+        <li> <a href="faciliteter.html">Faciliteter</a></li>
+    </div>
+
+
+
+    <nav>
+        <div class="ham_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo">
+
+
+            <a href="index.html">
+                <img src="/Billeder/logo.svg" alt="logo">
+            </a>
+
+
+        </div>
+
+
+        <div class="sprog_ikon">
+
+            <img src="/Billeder/Sprog_Ikon-removebg-preview.png" alt="sprog-ikon">
+        </div>
+
+
+
+        <!-- NYT: links som “knapper” i navbaren -->
+        <ul class="nav_links">
+            <li> <a href="lokationer.html">Lokationer</a></li>
+            <li> <a href="sevaedigheder.html">Seværdigheder</a></li>
+            <li> <a href="faciliteter.html">Faciliteter</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <h1>Faciliteter</h1>
+        </section>
+
+        <section class="facilities">
+
+            <article class="facility">
+                <h2>Parkering</h2>
+                <img src="Billeder_faciliteter/Parkering.png" alt="Parkering">
+            </article>
+
+            <article class="facility">
+                <h2>Transport til hotellet</h2>
+                <img src="Billeder_faciliteter/transport.png" alt="Transport">
+            </article>
+
+            <article class="facility">
+                <h2>Gruppe bestilling</h2>
+                <img src="Billeder_faciliteter/gruppebooking.png" alt="Gruppebooking">
+            </article>
+
+        </section>
+
+        <section class="morgenmad-section">
+
+            <h2>Morgenmad</h2>
+
+            <img src="Billeder_faciliteter/Morgenmad.png" alt="Morgenmad">
+
+
+            <div class="morgenmadbutton">
+                <button popovertarget="morgenmad_popover">
+                    Læs mere
+                </button>
+            </div>
+            <div id="morgenmad_popover" popover>
+                <img class="popover-img" src="Billeder_faciliteter/Morgenmad.png" alt="Morgenmad">
+
+                <p>
+                    Hos Wakeup Copenhagen er morgenmaden en god start på en ny dag.
+                    Få den bedste start på dagen med en skøn morgenmadsbuffet på en af vores hyggelige
+                    morgenmadsrestauranter på Wakeup Copenhagen i København og Aarhus.
+
+                    Læn dig tilbage i vores arkitekttegnede morgenmadsrestauranter, hvor du kan samle tankerne over en
+                    lækker morgenmadsbuffet, der giver energi til resten af dagen.
+
+                    Voksne: DKK 95,-
+                    Børn under 12 år: DKK 50,-
+                    Børn under 3 år: Gratis
+                </p>
+
+                <button popovertarget="morgenmad_popover" popovertargetaction="hide">
+                    Luk
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="billeder_sevaerdigheder/footer_tema5.svg" alt="billed af hoteller">
+        <div class="Ydeligere_info">
+            <img src="billeder_sevaerdigheder/logo.svg" alt="logo">
+            <div>
+                <h3>Info</h3>
+                <p>Om os</p>
+                <p>Parkering</p>
+            </div>
+            <div>
+                <h3>Booking</h3>
+                <p>Hollerne</p>
+                <p>Værelser og Priser</p>
+                <p>Firmaaftale</p>
+                <p>Gruppebestilling</p>
+                <p>Statsaftale</p>
+                <p>Gavekort</p>
+            </div>
+            <div>
+                <h3 class="nyhedsbrev_h3">Tilmeld dig vores nyhedsbrev</h3>
+                <a class="link_footer" href="http://">Tilmeld dig her</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,601 @@
+/* hamburger_menu */
+
+/* off_screen_menu */
+
+.off_screen_menu li {
+  margin-bottom: 10px;
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  background: var(--grøn);
+
+  min-width: 150px;
+  width: 25vw;
+}
+
+.off_screen_menu {
+  background-color: var(--baggrund);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  left: -450px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  transition: 0.6s ease-in-out;
+  padding-left: 16px;
+  list-style: none;
+  padding-top: 80px;
+  z-index: 10;
+}
+
+.off_screen_menu.active {
+  left: 0;
+}
+
+nav {
+  position: relative;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--baggrund);
+  z-index: 20;
+}
+
+.ham_menu {
+  height: 50px;
+  width: 50px;
+  margin-right: auto;
+  position: relative;
+}
+
+.ham_menu span {
+  height: 1.2px;
+  width: 100%;
+  background-color: var(--brun);
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 2s ease-in-out;
+}
+
+.ham_menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham_menu span:nth-child(3) {
+  top: 75%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40px;
+}
+
+.logo img {
+  height: 100%; /* fylder hele nav-højden */
+  max-height: 150px; /* eller en fast px-værdi */
+  width: auto; /* bevar proportioner */
+  display: block;
+  object-fit: contain; /* sørger for at hele billedet er med */
+}
+
+.sprog_ikon {
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  height: 40px;
+}
+
+.sprog_ikon img {
+  height: 100%; /* fylder hele nav-højden */
+  max-height: 150px; /* eller en fast px-værdi */
+  width: auto; /* bevar proportioner */
+  display: block;
+  object-fit: contain; /* sørger for at hele billedet er med */
+}
+
+/*************************************************************/
+/*************************************************************/
+
+/* DESKTOP */
+/* LINKS I NAVBAR (desktop) */
+.nav_links {
+  list-style: none;
+  display: none; /* skjult som udgangspunkt (mobil) */
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav_links li a {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background-color: var(--brun);
+  color: var(--hvid);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav_links li a:hover {
+  background-color: #8f4912;
+  transform: translateY(-1px);
+}
+
+/* DESKTOP: fra fx 768px og op */
+@media (min-width: 768px) {
+  /* Skjul burger-menu og off-screen-menu */
+  .ham_menu {
+    display: none;
+  }
+  .off_screen_menu {
+    display: none; /* ingen slide-menu på desktop */
+  }
+
+  /* Vis links som knapper oppe i navbaren */
+  .nav_links {
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    background: var(--baggrund);
+  }
+
+  .sprog_ikon img {
+    margin-left: -30px;
+  }
+
+  .logo img {
+    margin-right: auto;
+  }
+
+  .logo {
+    position: static; /* ikke absolut mere */
+    transform: none;
+    margin-left: 50px; /* skubber logoet helt til højre */
+    height: 70px; /* behold højden hvis du vil */
+  }
+}
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+/* Forside */
+/* Video og tekst på forsiden */
+.video video {
+  width: 100%; /* fylder hele skærmens/containers bredde */
+  height: auto; /* justér højde efter proportioner */
+  display: block;
+
+  border-top: 4px solid var(--hvid);
+  border-bottom: 4px solid var(--hvid);
+}
+
+.video {
+  position: relative; /* VIGTIGT: gør tekstens position relativ til videoen */
+}
+
+/*************************************************************/
+/* selve videoen */
+.video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*************************************************************/
+/* teksten på forsiden */
+/* overlay-boksen med tekst + stjerner */
+.video_tekst {
+  position: absolute;
+  top: 50%; /* midt lodret i .video */
+  left: 50%; /* midt vandret i .video */
+  transform: translate(-50%, -50%);
+  z-index: 1; /* læg teksten over videoen */
+
+  color: var(--brun);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2vw;
+
+  font-weight: lighter;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--boks-baggrund);
+  border-radius: 40px;
+  white-space: nowrap;
+
+  margin-top: 10px; /* skubber til boksen så den ikke er på midten */
+}
+
+/*************************************************************/
+/* stjerne-rækken inde i boksen */
+.star {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.star img {
+  width: 10%;
+  height: auto;
+  display: block;
+  opacity: 0;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+/*************************************************************/
+/* Bokse med lokationer og booking */
+
+.bokse_lok_book {
+  position: absolute;
+  top: 80%; /* nederste del i .video */
+  left: 50%; /* midt vandret i .video */
+  transform: translate(-50%, -50%);
+  z-index: 1; /* læg teksten over videoen */
+  display: flex;
+  gap: 2rem;
+
+  color: var(--grøn);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 3vw;
+  font-weight: bolder;
+  margin-top: 10px; /* skubber til boksen så den ikke er på midten */
+}
+
+.book {
+  font-weight: lighter;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--brun);
+  white-space: nowrap;
+  min-width: 130px;
+  width: 25vw;
+}
+
+.book:hover {
+  background: var(--orange);
+  color: var(--rødbrun);
+  transform: translateY(-2px); /* lille “løft” */
+}
+
+/* linket inde i knappen */
+.book a,
+.book a:visited,
+.book a:active {
+  display: block; /* så hele knappen er klikbar */
+  color: var(--grøn); /* din egen tekstfarve */
+  text-decoration: none; /* ingen underline */
+}
+
+/* hover på linket/knappen */
+.book a:hover {
+  background: var(--orange); /* samme som din .book:hover */
+  color: var(--rødbrun);
+  transform: translateY(-2px);
+}
+
+.lokation {
+  font-weight: lighter;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--brun);
+  white-space: nowrap;
+  min-width: 130px;
+  width: 25vw;
+}
+
+.lokation:hover {
+  background: var(--orange);
+  color: var(--rødbrun);
+  transform: translateY(-2px); /* lille “løft” */
+}
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/* opdeling af siden med linjer */
+
+.linje {
+  height: 1.2px;
+  width: 200%;
+  background-color: var(--brun);
+  transform: translate(-50%, -50%);
+  transition: 2s ease-in-out;
+  margin-top: 5px;
+}
+
+.linje_kort {
+  height: 1.2px;
+  background-color: var(--brun);
+
+  width: 70%;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.h2_boks {
+  padding: 30px;
+  background-color: var(--boks-baggrund);
+  text-align: center;
+  width: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* skygge (valgfrit) */
+
+  border-radius: 0px;
+
+  margin: 1rem auto; /* auto i venstre/højre = centrer vandret */
+  /* resten som før */
+}
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+/* Scroll funktion til faciliteter */
+
+.faciliteter {
+  display: flex; /* læg elementer på række */
+  gap: 1rem; /* luft mellem billeder */
+  overflow-x: auto; /* horisontal scroll */
+  overflow-y: hidden; /* ingen lodret scroll */
+  padding: 1rem;
+  scroll-behavior: smooth; /* pæn, glidende scroll */
+}
+
+.tekst_billede {
+  position: absolute;
+  left: 50%;
+  bottom: 10%; /* lidt op fra bunden – ændr efter smag */
+  transform: translateX(-50%);
+
+  color: var(--brun);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+
+  padding: 0.3rem 0.8rem;
+  background: var(--boks-baggrund); /* halvgennemsigtig boks bag teksten */
+  border-radius: 999px; /* pill-form, kan ændres */
+
+  justify-content: center; /* centrer vandret */
+  align-items: center; /* centrer lodret */
+}
+
+/* Billeder / kort i faciliteter */
+
+.kort {
+  position: relative; /* gør det muligt at lægge tekst ovenpå */
+  flex: 0 0 220px; /* bredde pr. kort på mobil/tablet */
+  border-radius: 8px;
+  overflow: hidden; /* skjul evt. hjørner */
+}
+
+/* ramme på billederne */
+.faciliteter img {
+  border: 4px solid var(--hvid);
+  border-radius: 8px;
+}
+
+/* selve billedet inde i kortet */
+.kort img {
+  width: 100%;
+  height: 160px; /* højde på mobil/tablet */
+  object-fit: cover; /* fylder boksen uden at blive strukket */
+  display: block;
+}
+
+/* DESKTOP – større kort og billeder */
+@media (min-width: 768px) {
+  .kort {
+    flex: 0 0 480px; /* bredere kort på desktop */
+  }
+
+  .kort img {
+    height: 320px; /* højere billede på desktop */
+  }
+}
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+/* animation af stjerner */
+
+.star img:nth-child(1) {
+  animation: starFromLeft 0.8s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.star img:nth-child(2) {
+  animation: starFromLeft 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* keyframes – fra højre mod midten */
+@keyframes starFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/* Lokatioenr */
+
+.grid_lokationer {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr auto;
+
+  justify-content: center;
+  justify-items: center;
+}
+
+.hero_farve {
+  background-color: var(--grøn);
+  padding-bottom: 20px;
+}
+#waa_hotel {
+  grid-column: 3/4;
+}
+
+.hoteller_kbh {
+  font-weight: lighter;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--brun);
+  color: var(--grøn);
+  white-space: nowrap;
+  min-width: 130px;
+  width: 45vw;
+
+  margin: 1rem auto;
+  justify-items: center;
+  justify-content: center;
+}
+
+.hoteller_kbh:hover {
+  background: var(--orange);
+  color: var(--rødbrun);
+  transform: translateY(-2px); /* lille “løft” */
+}
+
+.hoteller_aah {
+  font-weight: lighter;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--brun);
+  color: var(--grøn);
+  white-space: nowrap;
+  min-width: 130px;
+  width: 45vw;
+
+  margin: 1rem auto;
+  justify-items: center;
+  justify-content: center;
+}
+
+.hoteller_aah:hover {
+  background: var(--orange);
+  color: var(--rødbrun);
+  transform: translateY(-2px); /* lille “løft” */
+}
+
+.hotel {
+  position: relative; /* gør det muligt at lægge tekst ovenpå */
+  flex: 0 0 auto; /* så de ligger på række og ikke krymper */
+  width: 250px; /* vælg selv bredde */
+  border-radius: 8px;
+  overflow: hidden; /* skjul evt. hjørner */
+
+  width: 90%; /* fylder hele skærmens/containers bredde */
+  height: auto; /* justér højde efter proportioner */
+}
+
+.navn_hotel {
+  background-color: var(--orange); /* vælg selv farve */
+  padding: 1rem 1.2rem; /* luft i boksen */
+  text-align: center; /* eller center, hvis du vil */
+
+  height: 50px;
+
+  max-width: 500px; /* men aldrig bredere end fx 1200px */
+  margin: 0 auto; /* centrer containeren på siden */
+
+  font-size: 2vw;
+}
+
+.lok_book {
+  position: absolute;
+  left: 50%;
+  bottom: 50%; /* lidt op fra bunden – ændr efter smag */
+  transform: translateX(-50%);
+
+  color: var(--brun);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+
+  padding: 0.3rem 0.8rem;
+  background: var(--boks-baggrund); /* halvgennemsigtig boks bag teksten */
+  border-radius: 999px; /* pill-form, kan ændres */
+
+  justify-content: center; /* centrer vandret */
+  align-items: center; /* centrer lodret */
+  font-size: 2vw;
+}
+
+.grid_1-1-1_aah {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr auto;
+
+  justify-content: center;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .navn_hotel {
+    background-color: var(--orange); /* vælg selv farve */
+    padding: 1rem 1.2rem; /* luft i boksen */
+    text-align: center; /* eller center, hvis du vil */
+
+    height: 80px;
+    max-width: 500px; /* men aldrig bredere end fx 1200px */
+    margin: 0 auto; /* centrer containeren på siden */
+
+    font-size: 2vw;
+  }
+}
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/* Trustpilot */
+
+.trustpilot {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.trustpilot img {
+  flex: 1 1 0; /* del pladsen ligeligt */
+  width: 100%; /* fyld den plads, flex giver */
+  height: auto; /* bevar proportioner (ingen distortion) */
+  display: block;
+  border-radius: 20px;
+}
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Joan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sevaerdigheder.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Seværdigheder</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+    <div class="off_screen_menu">
+
+        <li> <a href="lokationer.html">Lokationer</a></li>
+        <li> <a href="sevaedigheder.html">Seværdigheder</a></li>
+        <li> <a href="faciliteter.html">Faciliteter</a></li>
+    </div>
+
+
+
+    <nav>
+        <div class="ham_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo">
+
+
+            <a href="index.html">
+                <img src="/Billeder/logo.svg" alt="logo">
+            </a>
+
+
+        </div>
+
+
+        <div class="sprog_ikon">
+
+            <img src="/Billeder/Sprog_Ikon-removebg-preview.png" alt="sprog-ikon">
+        </div>
+
+
+
+        <!-- NYT: links som “knapper” i navbaren -->
+        <ul class="nav_links">
+            <li> <a href="lokationer.html">Lokationer</a></li>
+            <li> <a href="sevaedigheder.html">Seværdigheder</a></li>
+            <li> <a href="faciliteter.html">Faciliteter</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <main>
+        <div class="intro_seværdigheder">
+            <h1 class="seværdigheder_h1">Seværdigheder</h1>
+        </div>
+        <div class="textboks">
+            <h2>Find inspiration til oplevelser i København og Aarhus</h2>
+            <h3>Bo centralt på et af vores tre hoteller i København</h3>
+            <p>Vores inspirationssider er til dig, der elsker at planlægge ferien og søger information om byen, du snart
+                skal besøge.
+                <br>
+                I vores forskellige guides til både Aarhus og København kan du få inspiration til nogle af de bedste
+                aktiviteter,
+                attraktioner og spisesteder, som er værd at besøge, når du er på ferie.
+            </p>
+        </div>
+
+        <section class="artikel_1-1">
+            <article class="københavn_artikel">
+                <div class="Tekst_over">
+                    <img class="billed_københavn" src="billeder_sevaerdigheder/københavn.webp" alt="københavn">
+                    <button id="btn" class="btn_københavn" popovertarget="artikel1_popover">København</button>
+                </div>
+                <div id="artikel1_popover" popover>
+                    <button class="btn_luk" popovertarget="artikel1_popover">Luk</button>
+                    <img src="billeder_sevaerdigheder/københavn.webp" alt="københavn">
+                    <div>
+                        <h2>Oplevelser i København
+                        </h2>
+                        <p>Vi guider dig til de bedste oplevelser København har at byde på. Uanset om I er til vilde
+                            forlystelser, stille
+                            fordybning, vild shopping eller et godt måltid mad, så har vi de bedste tips til din ferie i
+                            storbyen.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="aarhus_artikel">
+                <div class="Tekst_over">
+                    <img class="billed_aarhus" src="billeder_sevaerdigheder/aarhus.webp" alt="aarhus">
+                    <button id="btn" class="btn_aarhus" popovertarget="artikel2_popover">Aarhus</button>
+                </div>
+                <div id="artikel2_popover" popover>
+                    <button class="btn_luk" popovertarget="artikel2_popover">Luk</button>
+                    <img src="billeder_sevaerdigheder/aarhus.webp" alt="Aarhus">
+                    <div>
+                        <h2>
+                            Oplevelser i Aarhus
+                        </h2>
+                        <p>
+                            Nysgerrig på, hvad der er værd at opleve i Aarhus? Byen byder på et væld af spændende
+                            aktiviteter for alle. Vi guider
+                            dig til de bedste kulturelle og gastronomiske oplevelser, som Aarhus tilbyder. 
+                        </p>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+
+    </main>
+    <footer>
+        <img src="billeder_sevaerdigheder/footer_tema5.svg" alt="billed af hoteller">
+        <div class="Ydeligere_info">
+            <img src="billeder_sevaerdigheder/logo.svg" alt="logo">
+            <div>
+                <h3>Info</h3>
+                <p>Om os</p>
+                <p>Parkering</p>
+            </div>
+            <div>
+                <h3>Booking</h3>
+                <p>Hollerne</p>
+                <p>Værelser og Priser</p>
+                <p>Firmaaftale</p>
+                <p>Gruppebestilling</p>
+                <p>Statsaftale</p>
+                <p>Gavekort</p>
+            </div>
+            <div>
+                <h3 class="nyhedsbrev_h3">Tilmeld dig vores nyhedsbrev</h3>
+                <a class="link_footer" href="http://">Tilmeld dig her</a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="ham_menu.js"></script>
+</body>
+
+</html>

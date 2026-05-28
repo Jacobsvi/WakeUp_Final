@@ -1,0 +1,76 @@
+html {
+  --rødbrun: #6d2211;
+  --grøn: #a1ad59;
+  --orange: #b86c3a;
+  --brun: #472915;
+  --baggrund: #f2decb;
+  --hvid: #ffff;
+  --boks-baggrund: rgba(255, 255, 255, 0.6);
+  --tektbg: #fcf0e2;
+}
+
+.h1 {
+  font-family: Gill Sans;
+}
+
+html {
+  background-color: var(--baggrund);
+}
+
+h2 {
+  font-family: "Joan", serif;
+}
+
+h3 {
+  font-family: "Joan", serif;
+}
+
+p {
+  font-family: "Jacques Francois", serif;
+  color: var(--brun);
+}
+
+main {
+  background-color: var(--baggrund);
+}
+
+h3 {
+  font-family: "Joan", serif;
+}
+p {
+  font-family: "Jacques Francois", serif;
+  color: var(--brun);
+}
+
+main {
+  background-color: var(--baggrund);
+}
+
+/****** FOOTEREN *****/
+footer {
+  background-color: var(--grøn);
+}
+/* grid for footeren */
+.Ydeligere_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 2rem;
+}
+/* style af link i footeren */
+.link_footer {
+  color: var(--baggrund);
+  font-size: 2.5vw;
+
+  border: 2px solid var(--baggrund);
+  font-family: "Jacques Francois", serif;
+  text-decoration: none;
+  padding: 5px;
+}
+.link_footer:hover {
+  color: var(--brun);
+  border: 2px solid var(--brun);
+}
+.nyhedsbrev_h3 {
+  margin-bottom: 1rem;
+}
